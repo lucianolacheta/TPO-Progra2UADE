@@ -1,0 +1,193 @@
+=======================================================================
+EJERCICIO 16: OPERACIONES EN UN ÁRBOL AVL - ANÁLISIS PASO A PASO
+=======================================================================
+
+CONSIGNA:
+- Partiendo de un AVL vacío, se solicita realizar las siguientes operaciones:
+a. Agregar el 20
+b. Agregar el 29
+c. Agregar el 21
+d. Agregar el 12
+e. Agregar el 7
+f. Eliminar el 20
+
+IMPORTANTE:
+- Altura = cantidad de nodos en el subárbol izquierdo y derecho
+- Factor de equilibrio (FE) = altura(subárbol derecho) - altura(subárbol izquierdo)
+
+OPERACIONES:
+- Rotación Simple a la Izquierda (RSI): cuando FE > 1 y el desequilibrio está en el subárbol derecho
+- Rotación Simple a la Derecha (RSD): cuando FE < -1 y el desequilibrio está en el subárbol izquierdo
+- Rotación Doble Izquierda-Derecha (RID): cuando FE < -1 y el desequilibrio está en el hijo derecho del subárbol izquierdo
+- Rotación Doble Derecha-Izquierda (RDI): cuando FE > 1 y el desequilibrio está en el hijo izquierdo del subárbol derecho
+
+=======================================================================
+PASO A PASO
+=======================================================================
+
+1. ESTADO INICIAL: Árbol AVL vacío
+
+   [] (árbol vacío)
+
+   FE: No aplica (árbol vacío)
+
+-----------------------------------------------------------------------
+
+2. OPERACIÓN: a. Agregar el 20
+
+   Insertamos 20 como raíz.
+
+   [20]
+
+   FE: 0 (no tiene hijos)
+   Operación: Inserción simple, no requiere rotación.
+
+-----------------------------------------------------------------------
+
+3. OPERACIÓN: b. Agregar el 29
+
+   Insertamos 29 a la derecha de 20 (por ser mayor).
+
+       [20]
+          \
+          [29]
+
+   FE de 20: +1 (tiene un hijo derecho, pero no izquierdo)
+   FE de 29: 0 (no tiene hijos)
+   
+   Operación: Inserción simple, el árbol sigue balanceado (FE entre -1 y +1).
+
+-----------------------------------------------------------------------
+
+4. OPERACIÓN: c. Agregar el 21
+
+   Insertamos 21 a la derecha de 20 (por ser mayor) y a la izquierda de 29 (por ser menor).
+
+       [20]
+          \
+          [29]
+         /
+       [21]
+
+   FE de 20: +2 (el subárbol derecho tiene altura 2, no tiene subárbol izquierdo)
+   FE de 29: -1 (tiene hijo izquierdo pero no derecho)
+   FE de 21: 0 (no tiene hijos)
+   
+   El factor de equilibrio de 20 es +2, lo que excede el límite permitido. 
+   Además, el desequilibrio ocurre en el hijo izquierdo (21) del subárbol derecho (29).
+   
+   Operación: Rotación Doble Derecha-Izquierda (RDI)
+   
+   1. Primero, rotación simple a la derecha sobre 29:
+          [20]
+            \
+            [21]
+              \
+              [29]
+              
+   2. Luego, rotación simple a la izquierda sobre 20:
+          [21]
+         /   \
+       [20]  [29]
+   
+   Árbol final tras la rotación:
+          [21]
+         /   \
+       [20]  [29]
+   
+   FE de 21: 0 (ambos subárboles tienen altura 1)
+   FE de 20: 0 (no tiene hijos)
+   FE de 29: 0 (no tiene hijos)
+
+-----------------------------------------------------------------------
+
+5. OPERACIÓN: d. Agregar el 12
+
+   Insertamos 12 a la izquierda de 20 (por ser menor).
+
+          [21]
+         /   \
+       [20]  [29]
+      /
+    [12]
+
+   FE de 21: -1 (subárbol izquierdo con altura 2, derecho con altura 1)
+   FE de 20: -1 (tiene hijo izquierdo, pero no derecho)
+   FE de 29: 0 (no tiene hijos)
+   FE de 12: 0 (no tiene hijos)
+   
+   Operación: Inserción simple, el árbol sigue balanceado (todos los FE entre -1 y +1).
+
+-----------------------------------------------------------------------
+
+6. OPERACIÓN: e. Agregar el 7
+
+   Insertamos 7 a la izquierda de 12 (por ser menor).
+
+          [21]
+         /   \
+       [20]  [29]
+      /
+    [12]
+    /
+  [7]
+
+   FE de 21: -2 (subárbol izquierdo con altura 3, derecho con altura 1)
+   FE de 20: -2 (subárbol izquierdo con altura 2, no tiene subárbol derecho)
+   FE de 12: -1 (tiene hijo izquierdo, pero no derecho)
+   FE de 29: 0 (no tiene hijos)
+   FE de 7: 0 (no tiene hijos)
+   
+   El factor de equilibrio de 21 es -2, lo que excede el límite permitido.
+   El factor de equilibrio de 20 también es -2.
+   
+   Operación: Rotación Simple a la Derecha (RSD) sobre 21
+   
+   Árbol final tras la rotación:
+          [20]
+         /   \
+       [12]  [21]
+      /        \
+    [7]        [29]
+   
+   FE de 20: 0 (ambos subárboles tienen altura 2)
+   FE de 12: -1 (tiene hijo izquierdo, pero no derecho)
+   FE de 21: 0 (tiene hijo derecho, pero no izquierdo)
+   FE de 7: 0 (no tiene hijos)
+   FE de 29: 0 (no tiene hijos)
+
+-----------------------------------------------------------------------
+
+7. OPERACIÓN: f. Eliminar el 20
+
+   Al eliminar 20 (raíz), debemos reemplazarlo con su sucesor inmediato,
+   que es el elemento más a la izquierda del subárbol derecho, en este caso 21.
+
+          [21]
+         /   \
+       [12]  [29]
+      /
+    [7]
+
+   FE de 21: -1 (subárbol izquierdo con altura 2, derecho con altura 1)
+   FE de 12: -1 (tiene hijo izquierdo, pero no derecho)
+   FE de 29: 0 (no tiene hijos)
+   FE de 7: 0 (no tiene hijos)
+   
+   Operación: Eliminación con reemplazo por sucesor inmediato, el árbol queda balanceado.
+
+=======================================================================
+RESUMEN FINAL: ÁRBOL AVL RESULTANTE
+=======================================================================
+
+          [21]
+         /   \
+       [12]  [29]
+      /
+    [7]
+
+Este es el árbol AVL final después de todas las operaciones solicitadas.
+Todos los factores de equilibrio están entre -1 y +1, por lo que el árbol
+está correctamente balanceado según los criterios de un AVL.
+
+======================================================================
