@@ -1,6 +1,6 @@
-package Implementaciones;
+package implementacion;
 
-import Interfaces.ConjuntoEspecialTDA;
+import interfaz.ConjuntoEspecialTDA;
 import tda.ConjuntoTDA;
 import imple.Conjunto;
 

@@ -1,6 +1,6 @@
-package Implementaciones;
+package implementacion;
 
-import Interfaces.ConjuntoMamushkaTDA;
+import interfaz.ConjuntoMamushkaTDA;
 import tda.DiccionarioSimpleTDA;
 import imple.DiccionarioSimple;
 import tda.ConjuntoTDA;

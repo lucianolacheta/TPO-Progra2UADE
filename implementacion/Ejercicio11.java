@@ -1,4 +1,4 @@
-package Implementaciones;
+package implementacion;
 
 import tda.DiccionarioMultipleTDA;
 import tda.ColaTDA;

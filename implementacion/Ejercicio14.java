@@ -1,4 +1,4 @@
-package Implementaciones;
+package implementacion;
 
 import tda.GrafoTDA;
 import tda.ConjuntoTDA;
