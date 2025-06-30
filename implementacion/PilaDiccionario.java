@@ -1,6 +1,6 @@
-package org.example.implementacion;
+package implementacion;
 
-import org.example.interfaz.PilaDiccionarioTDA;
+import interfaz.PilaDiccionarioTDA;
 import tda.PilaTDA;
 import tda.DiccionarioSimpleTDA;
 import tda.ConjuntoTDA;

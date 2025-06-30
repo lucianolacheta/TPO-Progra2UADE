@@ -1,12 +1,12 @@
-package org.example;
+package tests;
 
-import org.example.implementacion.PilaDiccionario;
-import org.example.interfaz.PilaDiccionarioTDA;
+import implementacion.PilaDiccionario;
+import interfaz.PilaDiccionarioTDA;
 import tda.PilaTDA;
 import tda.DiccionarioSimpleTDA;
 import tda.ConjuntoTDA;
 import imple.Pila;
-import imple.Conjunto;
+
 
 
 public class PilaDiccionarioTest {

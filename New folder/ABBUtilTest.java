@@ -1,7 +1,8 @@
-package org.example;
+package tests;
 
-import org.example.implementacion.ABBUtil;
-import org.example.interfaz.ABBUtilTDA;
+
+import implementacion.ABBUtil;
+import interfaz.ABBUtilTDA;
 import tda.ABBTDA;
 import imple.ABB;
 

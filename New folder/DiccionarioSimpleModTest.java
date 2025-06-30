@@ -1,7 +1,7 @@
-package org.example;
+package tests;
 
-import org.example.implementacion.DiccionarioSimpleMod;
-import org.example.interfaz.DiccionarioSimpleModTDA;
+import implementacion.DiccionarioSimpleMod;
+import interfaz.DiccionarioSimpleModTDA;
 import tda.ConjuntoTDA;
 
 /**

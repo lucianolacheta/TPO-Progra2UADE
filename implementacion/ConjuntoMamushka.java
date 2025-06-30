@@ -4,8 +4,6 @@ import interfaz.ConjuntoMamushkaTDA;
 import tda.DiccionarioSimpleTDA;
 import imple.DiccionarioSimple;
 import tda.ConjuntoTDA;
-import imple.Conjunto;
-
 
 //Estrategia:
 //Se usa un DiccionarioSimpleTDA para almacenar la cantidad de veces que se agregó cada valor.

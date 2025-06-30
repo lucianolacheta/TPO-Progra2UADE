@@ -1,9 +1,8 @@
-package org.example.implementacion;
+package implementacion;
 
-import org.example.interfaz.DiccionarioSimpleModTDA;
+import interfaz.DiccionarioSimpleModTDA;
 import tda.ConjuntoTDA;
 import imple.Conjunto;
-
 /**
  * a) Estrategia utilizada:
  *    Se extiende el concepto de diccionario tradicional añadiendo un contador "factorMod" 

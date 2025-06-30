@@ -1,4 +1,4 @@
-package org.example.interfaz;
+package interfaz;
 
 import tda.ABBTDA;
 

@@ -1,6 +1,6 @@
-package org.example.implementacion;
+package implementacion;
 
-import org.example.interfaz.ABBUtilTDA;
+import interfaz.ABBUtilTDA;
 import tda.ABBTDA;
 
 /**

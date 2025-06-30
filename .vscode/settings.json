@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\lucia\\UADE\\progra2\\P2lib.jar"
+    ]
+}

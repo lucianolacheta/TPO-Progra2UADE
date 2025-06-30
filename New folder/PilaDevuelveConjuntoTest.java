@@ -1,7 +1,7 @@
-package org.example;
+package tests;
 
-import org.example.implementacion.PilaDevuelveConjunto;
-import org.example.interfaz.PilaDevuelveConjuntoTDA;
+import implementacion.PilaDevuelveConjunto;
+import interfaz.PilaDevuelveConjuntoTDA;
 import tda.PilaTDA;
 import tda.ConjuntoTDA;
 import imple.Pila;

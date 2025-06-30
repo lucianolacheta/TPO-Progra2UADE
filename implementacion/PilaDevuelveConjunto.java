@@ -1,6 +1,6 @@
-package org.example.implementacion;
+package implementacion;
 
-import org.example.interfaz.PilaDevuelveConjuntoTDA;
+import interfaz.PilaDevuelveConjuntoTDA;
 import tda.PilaTDA;
 import tda.ConjuntoTDA;
 import imple.Pila;
