@@ -9,6 +9,20 @@ Grado de un vértice en GrafoTDA
 Calcular, para un vértice `v`, la diferencia entre su número de aristas salientes y el número de aristas entrantes.
  */
 
+/*
+ Estrategia:
+ 1. Clonar el conjunto de vértices del grafo para poder iterar sin alterar 
+ el original.
+ 2. Inicializar dos contadores: `salidas` y `entradas` a 0.
+ 3. Mientras la copia no esté vacía:
+    a. Elegir un vértice `otro` y sacarlo de la copia.
+    b. Si existe arista de `v` a `otro`, incrementar `salidas`.
+    c. Si existe arista de `otro` a `v`, incrementar `entradas`.
+ 4. Devolver la diferencia `salidas - entradas`, que es el grado de `v`.
+
+ Complejidad: O(n) donde n = número de vértices (cada verifica existeArista es O(1) en la implementación estándar).
+*/
+
 public class Ejercicio15 {
 
     public static int gradoVertice(GrafoTDA grafo, int v) {

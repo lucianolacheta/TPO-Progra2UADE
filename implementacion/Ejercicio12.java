@@ -5,7 +5,8 @@ import tda.*;
 /*
 Ejercicio12
 Suma de impares en ABB
-Recorrer un árbol binario de búsqueda (ABB) y calcular la suma de todos sus nodos con valor impar.
+Recorrer un árbol binario de búsqueda (ABB) y calcular la suma de 
+todos sus nodos con valor impar.
  */
 
 /*

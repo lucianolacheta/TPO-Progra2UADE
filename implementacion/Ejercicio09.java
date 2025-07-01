@@ -10,7 +10,17 @@ Dada una pila y una cola, devolver un ConjuntoTDA con los valores comunes
 a ambas estructuras.
  */
 
-
+/*
+ Estrategia:
+ 1. Clonar la pila y la cola de entrada (copiarPila y copiarCola) para 
+ no modificar las originales.
+ 2. Vaciar la copia de la cola en un ConjuntoTDA (`conjuntoCola`), de 
+ modo que podamos consultar pertenencia.
+ 3. Recor­r cada elemento de la copia de la pila; si ese valor existe en 
+ `conjuntoCola`, lo agregamos al Conjunto resultado.
+ 4. Devolver el Conjunto resultado con todos los valores que estaban 
+ tanto en la pila como en la cola.
+*/
 
 public class Ejercicio09 {
 
