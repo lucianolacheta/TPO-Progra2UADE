@@ -5,25 +5,28 @@ import imple.Cola;
 import tda.ConjuntoTDA;
 import imple.Conjunto;
 
+/*
+Ejercicio08
+Sin repetidos en ColaTDA
+Recorrer una cola y construir otra con la primera aparición de cada valor, 
+respetando el orden original, sin alterar la cola de entrada.
+*/
+
+/*
+a) Estrategia utilizada:
+1. Crear tres estructuras auxiliares:
+    - resultado, vistos, aux
+2. Recorrer original hasta vaciarla:
+    a. Desencolar frente → elem.
+    b. Encolar elem en aux (para reconstruir original más tarde).
+    c. Si elem no está en vistos:
+        i.   agregar elem a vistos.
+        ii.  encolar elem en resultado.
+3. Reconstruir original desencolando todo de aux y reenfilándolo de nuevo.
+*/
+
 public class Ejercicio08 {
 
-    /**
-     * Estrategia:
-     * 1. Crear tres estructuras auxiliares:
-     *    - resultado: nueva cola donde iremos encolando sólo la primera aparición de cada elemento.
-     *    - vistos: conjunto que registra qué valores ya procesamos.
-     *    - aux: cola auxiliar para vaciar y luego restaurar la cola original.
-     * 2. Recorrer original hasta vaciarla:
-     *      a. Desencolar frente → elem.
-     *      b. Encolar elem en aux (para reconstruir original más tarde).
-     *      c. Si elem no está en vistos:
-     *           i.   agregar elem a vistos.
-     *           ii.  encolar elem en resultado.
-     * 3. Reconstruir original desencolando todo de aux y reenfilándolo de nuevo.
-     * 4. Devolver resultado, que contiene los elementos únicos en el orden de su primera aparición.
-     *
-     */
-	
     public static ColaTDA inRepetidos(ColaTDA original) { //O(n²)
         ColaTDA resultado = new Cola();
         resultado.inicializarCola();

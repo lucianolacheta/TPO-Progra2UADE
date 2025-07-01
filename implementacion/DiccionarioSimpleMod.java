@@ -3,12 +3,21 @@ package implementacion;
 import interfaz.DiccionarioSimpleModTDA;
 import tda.ConjuntoTDA;
 import imple.Conjunto;
-/**
- * a) Estrategia utilizada:
- *    Se extiende el concepto de diccionario tradicional añadiendo un contador "factorMod" 
- *    que registra las modificaciones de cada clave. Cuando se agrega una clave nueva, 
- *    su factorMod es 0, y se incrementa en 1 cada vez que se modifica su valor.
+/*
+Ejercicio04
+DiccionarioSimpleModTDA
+Extiende DiccionarioSimpleTDA agregando un contador de “modificaciones”: 
+cada vez que cambias el valor de una clave, incrementa su factor de 
+modificación y lo puedes consultar.
  */
+
+/*
+a) Estrategia utilizada:
+Se extiende el concepto de diccionario tradicional añadiendo un contador "factorMod" 
+que registra las modificaciones de cada clave. Cuando se agrega una clave nueva, 
+su factorMod es 0, y se incrementa en 1 cada vez que se modifica su valor.
+*/
+
 public class DiccionarioSimpleMod implements DiccionarioSimpleModTDA {
 
     private class Elemento {

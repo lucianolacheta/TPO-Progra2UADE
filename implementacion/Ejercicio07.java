@@ -1,21 +1,26 @@
 package implementacion;
 
-import interfaz.PilaDevuelveConjuntoTDA;
 import tda.PilaTDA;
 import tda.ConjuntoTDA;
 import imple.Pila;
 import imple.Conjunto;
 
-/**
- * a) Estrategia utilizada:
- *    Para identificar elementos repetidos en una pila, se recorre la pila una única vez
- *    manteniendo dos conjuntos: uno con elementos vistos y otro con repetidos. Si un
- *    elemento ya está en "vistos", se añade a "repetidos". La pila original se preserva
- *    intacta usando una pila auxiliar.
+/*
+Ejercicio07
+Repetidos en PilaTDA
+Dada una pila, devolver un ConjuntoTDA con los elementos que aparecen más de una vez.
  */
-public class PilaDevuelveConjunto implements PilaDevuelveConjuntoTDA {
 
-    @Override
+/*
+a) Estrategia utilizada:
+Para identificar elementos repetidos en una pila, se recorre la pila una 
+única vez manteniendo dos conjuntos: uno con elementos vistos y otro con 
+repetidos. Si un elemento ya está en "vistos", se añade a "repetidos". 
+La pila original se preserva intacta usando una pila auxiliar.
+*/
+
+public class Ejercicio07 {
+
     public ConjuntoTDA elementosRepetidos(PilaTDA pila) {
         // O(n) donde n es el número de elementos en la pila
         

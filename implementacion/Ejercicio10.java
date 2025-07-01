@@ -1,23 +1,26 @@
 package implementacion;
 
-import interfaz.PilaDiccionarioTDA;
 import tda.PilaTDA;
 import tda.DiccionarioSimpleTDA;
 import tda.ConjuntoTDA;
 import imple.Pila;
 import imple.DiccionarioSimple;
 
-/**
- * a) Estrategia utilizada:
- *    Para contar la frecuencia de aparición de elementos en una pila, se usa un diccionario
- *    donde las claves son los elementos y los valores su frecuencia. Se vacía la pila a una
- *    pila auxiliar contando frecuencias, y luego se restaura completamente para mantener
- *    la estructura original intacta.
+/*
+Ejercicio10
+Frecuencias en PilaTDA → DiccionarioSimpleTDA
+Recorrer una pila y generar un diccionario simple donde cada elemento 
+de la pila es clave y el valor es la cantidad de veces que aparece.
  */
-public class PilaDiccionario implements PilaDiccionarioTDA {
-    
 
-    @Override
+/*
+Estrategia utilizada:
+Se vacía la pila a una pila auxiliar contando frecuencias, y luego se 
+restaura completamente para mantener la estructura original intacta.
+*/
+
+public class Ejercicio10 {
+    
     public DiccionarioSimpleTDA contarFrecuencias(PilaTDA pila) {
         // O(n) donde n es el número de elementos en la pila
         

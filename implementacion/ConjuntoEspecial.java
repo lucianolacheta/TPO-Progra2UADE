@@ -4,11 +4,20 @@ import interfaz.ConjuntoEspecialTDA;
 import tda.ConjuntoTDA;
 import imple.Conjunto;
 
-//Estrategia:
-//Se utiliza un ConjuntoTDA como base. Cada método verifica con pertenece() o conjuntoVacio()
-//si la operación fue exitosa y devuelve una Respuesta con un booleano de error y, si corresponde, un valor.
+/*
+Ejercicio01
+ConjuntoEspecialTDA
+Extiende ConjuntoTDA para que sus operaciones (agregar, sacar, elegir) 
+devuelvan un objeto Respuesta que indica si la operación fue exitosa y, 
+cuando aplica, el valor involucrado.
+*/
 
-
+/*
+Estrategia:
+Se utiliza un ConjuntoTDA como base. Cada método verifica con pertenece() 
+o conjuntoVacio() si la operación fue exitosa y devuelve una Respuesta con
+un booleano de error y, si corresponde, un valor.
+*/
 public class ConjuntoEspecial implements ConjuntoEspecialTDA {
  private ConjuntoTDA conjunto;
 

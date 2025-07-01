@@ -6,11 +6,19 @@ import imple.ColaPrioridad;
 import tda.ConjuntoTDA;
 import imple.Conjunto;
 
+/*
+Ejercicio05
+DiccionarioSimple con ColaPrioridadTDA
+Implementar DiccionarioSimpleTDA (métodos agregar, eliminar, recuperar, claves) 
+usando solo una ColaPrioridadTDA para guardar los pares clave→valor.
+*/
 
-//Estrategia:
-//Se implementa un diccionario usando una ColaPrioridadTDA, donde la clave se guarda como prioridad
-//y el valor como elemento. Como no se puede modificar directamente la cola, para cada operación
-//se recorren todos los elementos, se los almacena temporalmente y se vuelve a construir la cola con los cambios aplicados.
+/*
+Estrategia:
+Como no se puede modificar directamente la cola, para cada operación se 
+recorren todos los elementos, se los almacena temporalmente y se vuelve 
+a construir la cola con los cambios aplicados.
+*/
 
 public class DiccionarioSimple implements DiccionarioSimpleTDA {
 
